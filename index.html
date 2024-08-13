@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test Send Mail With SMTP">
+    <link rel="stylesheet" href="styles.css">
+    <title>SMTP Test Tool</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email SMTP Test Tool</h1>
+        <form id="emailForm">
+            <label for="server">SMTP Server:</label>
+            <input type="text" id="server" placeholder="mail.domain.com" required>
+            <label for="server">Port:</label>
+            <input type="number" id="port" placeholder="25" required>
+            <label for="server">Email Username:</label>
+            <input type="email" id="username" placeholder="istest@domain.com" required>
+            <label for="server">Email Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="*********" required>
+                <span class="toggle-password" onclick="togglePassword()">
+                    &#128065;
+                </span>
+            </div>
+
+            <label for="server">Recipient Email:</label>
+            <input type="email" id="to" placeholder="Recipient Email" required>
+            <button type="submit" id="sendButton">Test Send Email</button>
+            <div id="loading" class="loading" style="display: none;">Loading...</div>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
